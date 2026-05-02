@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BDA IESEG — Branche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="branche.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="index.html" class="back-link">
+    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Toutes les branches
+  </a>
+  <span class="nav-brand">BDA IESEG</span>
+</nav>
+
+<!-- HERO BRANCHE -->
+<div class="branch-hero" id="branch-hero">
+  <div class="branch-hero-img-wrap">
+    <img id="hero-img" src="" alt="">
+    <div class="branch-hero-overlay"></div>
+  </div>
+  <div class="branch-hero-content">
+    <div class="branch-tag" id="branch-tag"></div>
+    <h1 id="branch-title"></h1>
+    <p class="branch-tagline" id="branch-tagline"></p>
+    <div class="branch-collab-hero" id="branch-collab-hero"></div>
+  </div>
+</div>
+
+<!-- CONTENU -->
+<main class="branch-main">
+
+  <!-- Description -->
+  <section class="branch-section">
+    <div class="branch-section-label" id="section-label-desc">À propos</div>
+    <div class="branch-description" id="branch-description"></div>
+  </section>
+
+  <!-- Ce qu'on fait -->
+  <section class="branch-section">
+    <div class="branch-section-label">Ce qu'on fait</div>
+    <div class="branch-activities" id="branch-activities"></div>
+  </section>
+
+  <!-- Formulaire -->
+  <section class="branch-section form-section" id="inscription">
+    <div class="branch-section-label">Inscription</div>
+    <div class="form-card">
+      <div class="form-card-header">
+        <h2 class="form-card-title">Rejoindre la <span id="form-branch-name"></span></h2>
+        <p class="form-card-sub">Remplis ce formulaire et l'équipe BDA te contactera sur Messenger.</p>
+      </div>
+
+      <div id="form-screen">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-prenom">
+              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Prénom
+            </label>
+            <input type="text" id="f-prenom" placeholder="Ton prénom" autocomplete="given-name">
+            <div class="form-error">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Ce champ est requis
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-nom">
+              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Nom
+            </label>
+            <input type="text" id="f-nom" placeholder="Ton nom de famille" autocomplete="family-name">
+            <div class="form-error">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Ce champ est requis
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-messenger">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              Nom Messenger
+            </label>
+            <input type="text" id="f-messenger" placeholder="Ton nom sur Messenger">
+            <div class="form-error">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Ce champ est requis
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-email">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email IESEG
+            </label>
+            <input type="email" id="f-email" placeholder="prenom.nom@ieseg.fr" autocomplete="email">
+            <div class="form-error" id="email-error">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Adresse @ieseg.fr requise
+            </div>
+          </div>
+        </div>
+
+        <div class="error-banner" id="error-banner">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="error-banner-text">Une erreur est survenue. Réessaie dans quelques instants.</span>
+        </div>
+
+        <button class="btn-submit" id="btn-submit">
+          <span id="btn-text">S'inscrire à la branche</span>
+          <div class="spinner" id="spinner"></div>
+          <svg id="btn-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+
+      <div class="success-screen" id="success-screen">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Inscription confirmée !</h3>
+        <p>Tu es bien inscrit·e à la <strong id="success-branch"></strong>.<br>L'équipe BDA te contactera bientôt sur Messenger.</p>
+        <a href="index.html" class="btn-back-home">Voir les autres branches</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>Bureau des Arts · IESEG School of Management · Les inscriptions sont transmises à l'équipe BDA</footer>
+
+<script src="branches-data.js"></script>
+<script src="branche.js"></script>
+</body>
+</html>
